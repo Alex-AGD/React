@@ -1,0 +1,27 @@
+import React from "react";
+
+const Profile = () => {
+    return <div className='content'>
+        <img src='https://images.unsplash.com/photo-1452805809447-a55bbdbc76ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80'/>
+        <div>
+            avatar + description
+        </div>
+
+        <div>
+            My posts
+            <div>
+                New Post
+            </div>
+        </div>
+
+        <div>
+            post 1
+        </div>
+        <div>
+            post 2
+        </div>
+    </div>
+
+}
+
+export default Profile;
