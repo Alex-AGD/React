@@ -1,3 +1,11 @@
 .post {
     color: #e4c631;
 }
+
+.post .disLike {
+    color: #000dff;
+}
+
+.post .like {
+    color: chartreuse;
+}

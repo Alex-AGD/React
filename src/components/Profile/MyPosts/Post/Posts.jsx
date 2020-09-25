@@ -1,15 +1,15 @@
 import React from "react";
 import './Posts.module.css';
-import p from './Posts.module.css'
+import s from './Posts.module.css'
 
 const Posts = (props) => {
 
     return (
-        <div className={p.item}>
+        <div className={s.item}>
             <img src='https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'/>
-            { props.message }
+            {props.message}
             <div>
-                <span>{props.like}</span>
+                <span>Like {props.likes} DisLike {props.disLike}</span>
             </div>
         </div>
     )
