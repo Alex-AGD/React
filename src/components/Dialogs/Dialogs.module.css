@@ -2,12 +2,17 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
-.dialogsItems .dialog {
-
+.dialogsItems a {
+    color: #197343;
+    text-decoration: none;
+}
+.dialogsItems  a.activeLink {
+    color: gold;
 }
 .messages {
 
 }
-.message {
+.dialog a.active {
+    color: gold;
 
 }

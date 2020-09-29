@@ -1,11 +1,15 @@
-.post {
-    color: #e4c631;
-}
-
 .post .disLike {
     color: #000dff;
 }
 
 .post .like {
-    color: chartreuse;
+    color: #284a03;
+}
+
+.postBlock {
+    padding: 10px;
+    color: #e4c631;
+}
+.posts {
+    margin-top: 10px;
 }
