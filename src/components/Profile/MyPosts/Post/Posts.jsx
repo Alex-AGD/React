@@ -8,7 +8,7 @@ const Posts = (props) => {
         <div className={s.item}>
             <img src='https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'/>
             {props.message}
-            <div>
+            <div className={s.likes}>
                 <span>Like {props.likes}</span>
             </div>
         </div>

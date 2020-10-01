@@ -3,16 +3,16 @@
     grid-template-columns: 2fr 10fr;
 }
 .dialogsItems a {
-    color: #197343;
+    color: #ffa502;
     text-decoration: none;
 }
 .dialogsItems  a.activeLink {
-    color: gold;
+    color: #ff4757;
 }
 .messages {
-
+    color: #a4b0be;
 }
 .dialog a.active {
-    color: gold;
+    color: #ff4757;
 
 }
