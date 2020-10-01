@@ -9,7 +9,7 @@ const Posts = (props) => {
             <img src='https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'/>
             {props.message}
             <div>
-                <span>Like {props.likes} DisLike {props.disLike}</span>
+                <span>Like {props.likes}</span>
             </div>
         </div>
     )
