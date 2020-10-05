@@ -13,33 +13,30 @@ import Settings from "./components/Settings/Settings";
 let SomeComponent = () => <Dialogs/>
 
 const App = (props) => {
-    debugger;
     return (
-        <BrowserRouter>
-            <div className='app-wrapper'>
-                <Header/>
-                <Navbar/>
-                <div className='app-wrapper-content'>
-                    {/*                 <Route path='/messages' component={Dialogs}/>
+        <div className='app-wrapper'>
+            <Header/>
+            <Navbar state={props.state.profilePage}/>
+            <div className='app-wrapper-content'>
+                {/*                 <Route path='/messages' component={Dialogs}/>
                     <Route path='/profile' component={Profile}/>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
                     <Route path='/settings' component={Settings}/>*/}
-                    {/*варинат с component*/}
-                    {/*<Route path='/settings' component={SomeComponent}/>**/}
+                {/*варинат с component*/}
+                {/*<Route path='/settings' component={SomeComponent}/>**/}
 
-                    {/*Прокидываем пропсы*/}
-                    <Route path='/messages'
-                           render={ () => <Dialogs state={props.state.dialogsPage} /> }/>
-                    <Route path='/profile'
-                           render={ () => <Profile state={props.state.profilePage}/>}/>
-                    <Route path='/news' render={() => <News/>}/>
-                    <Route path='/music' render={() => <Music/>}/>
-                    <Route path='/settings' render={() => <Settings/>}/>
-
-                </div>
+                {/*Прокидываем пропсы*/}
+                <Route path='/messages'
+                       render={() => <Dialogs state={props.state.dialogsPage}/>}/>
+                <Route path='/profile'
+                       render={() => <Profile state={props.state.profilePage}/>}/>
+                <Route path='/news' render={() => <News/>}/>
+                <Route path='/music' render={() => <Music/>}/>
+                <Route path='/settings' render={() => <Settings/>}/>
             </div>
-        </BrowserRouter>
+        </div>
+
     )
 
 }
