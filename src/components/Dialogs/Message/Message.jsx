@@ -1,11 +1,27 @@
 import React from "react";
 import s from './../Dialogs.module.css'
-import {Avatar} from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 
 const Message = (props) => {
+
+    let newPostElement = React.createRef();
+
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        alert(text)
+    }
+
     return (
         <div className={s.dialog}>
-            {props.message}
+            <textarea ref={newPostElement}/>
+            <div>
+                <Button variant={"contained"}
+                        onClick={addPost}
+                        color={"primary"}>Add Post</Button>
+            </div>
+            <div>
+                {props.message}
+            </div>
         </div>
 
     )
