@@ -16,14 +16,6 @@ const App = (props) => {
             <Header/>
             <Navbar state={props.state.profilePage}/>
             <div className='app-wrapper-content'>
-                {/*                 <Route path='/messages' component={Dialogs}/>
-                    <Route path='/profile' component={Profile}/>
-                    <Route path='/news' component={News}/>
-                    <Route path='/music' component={Music}/>
-                    <Route path='/settings' component={Settings}/>*/}
-                {/*варинат с component*/}
-                {/*<Route path='/settings' component={SomeComponent}/>**/}
-                {/*Прокидываем пропсы*/}
                 <Route path='/messages'
                        render={() => <Dialogs messagesPage={props.state.dialogsPage}
                                               addMessage={props.addMessage}
@@ -43,3 +35,11 @@ const App = (props) => {
 
 export default App;
 
+{/*<Route path='/messages' component={Dialogs}/>
+   <Route path='/profile' component={Profile}/>
+   <Route path='/news' component={News}/>
+   <Route path='/music' component={Music}/>
+   <Route path='/settings' component={Settings}/>*/}
+{/*варинат с component*/}
+{/*<Route path='/settings' component={SomeComponent}/>**/}
+{/*Прокидываем пропсы*/}
