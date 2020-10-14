@@ -3,6 +3,7 @@ import './MyPosts.module.css';
 import s from './MyPosts.module.css'
 import Post from "./Post/Posts";
 import {addPostActionCreator, updateNewPostActionCreator} from "../../../redux/state";
+import Button from "@material-ui/core/Button";
 
 const MyPosts = (props) => {
 
@@ -29,9 +30,9 @@ const MyPosts = (props) => {
                               ref={newPostElement}
                               value={props.newPostText}/>
                 </div>
-                <div>
-                    <button onClick={addPost}>Add post</button>
-                </div>
+                <Button variant={"contained"}
+                        onClick={addPost}
+                        color={"primary"}>Add Post</Button>
             </div>
             <div className={s.posts}>
                 {postElements}

@@ -6,10 +6,14 @@ const DialogItem = (props) => {
     return (
         <div className={s.dialogs}>
             <NavLink to={"/dialogs/" + props.id}>
+               <div>
+{/*
+                    <img src='https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'/>
+*/}
+               </div>
                 <div>
-                    <div><img src='https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png'/></div>
-                </div>
-                <div> {props.name} </div>
+                    {props.name}
+                 </div>
             </NavLink>
         </div>
     )

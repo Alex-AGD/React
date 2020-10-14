@@ -10,6 +10,7 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
 
+
 const App = (props) => {
     return (
         <div className='app-wrapper'>
@@ -17,8 +18,7 @@ const App = (props) => {
             <Navbar state={props.state.profilePage}/>
             <div className='app-wrapper-content'>
                 <Route path='/messages'
-                       render={() => <Dialogs dialogsPage={props.state.dialogsPage}
-                                              dispatch={props.dispatch}/>}/>
+                       render={() => <Dialogs store={props.store} />}/>
                 <Route path='/profile'
                        render={() => <Profile profilePage={props.state.profilePage}
                                               dispatch={props.dispatch}/>}/>

@@ -6,49 +6,44 @@ import Button from "@material-ui/core/Button";
 import {addMessageActionCreator, updateNewMessageActionCreator} from "../../redux/state";
 
 
-
 const Dialogs = (props) => {
+    let state = props.store.getState().dialogsPage;
 
-    let messagesElements = props.dialogsPage.messages.map(m => <Message message={m.message}/>);
-    let dialogsElements = props.dialogsPage.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
+    let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
+    let messagesElements = state.messages.map(m => <Message message={m.message}/>);
+    let newMessagesElements = state.newMessageText;
 
-    let newMessageElement = React.createRef();
 
     let addMessage = () => {
-        props.dispatch( addMessageActionCreator() );
+        props.store.dispatch(addMessageActionCreator());
     }
-    let onMessageChange = () => {
-        let text = newMessageElement.current.value;
-        let action = updateNewMessageActionCreator(text);
-        props.dispatch( action )
+    let onMessageChange = (e) => {
+        let updateTexMessage = e.target.value;
+        props.store.dispatch(updateNewMessageActionCreator(updateTexMessage))
     }
 
     return (
         <div className={s.dialogs}>
-            <DialogItem />
-            <Message  messages={props.dialogsPage.messages}
-                      newMessageText={props.dialogsPage.newMessageText}
-                      dispatch={props.dispatch}/>
+            <DialogItem/>
+            <Message/>
 
             <div className={s.dialogsItems}>
                 {dialogsElements}
             </div>
+
             <div className={s.messages}>
-                <textarea onChange={onMessageChange}
-                          ref={newMessageElement}
-                          value={props.newMessageText}/>
+                <div>{messagesElements}</div>
                 <div>
-                    <Button variant={"contained"}
-                            onClick={addMessage}
-                            color={"primary"}>Add Post</Button>
-                </div>
-                <div className={s.messages}>
-                {messagesElements}
+                    <div><textarea
+                        value={newMessagesElements}
+                        onChange={onMessageChange}
+                        placeholder='Enter your message'> </textarea></div>
+                    <div><Button variant={"contained"}
+                                 onClick={addMessage}
+                                 color={"primary"}>Add Post
+                    </Button></div>
                 </div>
             </div>
-
-
-
         </div>
     )
 
