@@ -2,8 +2,9 @@ import React from "react";
 import './MyPosts.module.css';
 import s from './MyPosts.module.css'
 import Post from "./Post/Posts";
-import {addPostActionCreator, updateNewPostActionCreator} from "../../../redux/state";
+
 import Button from "@material-ui/core/Button";
+import {addPostActionCreator, updateNewPostActionCreator} from "../../../redux/profileReducer";
 
 const MyPosts = (props) => {
 
