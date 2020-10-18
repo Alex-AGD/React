@@ -1,16 +1,23 @@
-import React from "react";
+import React, {Fragment} from "react";
+import {Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, UncontrolledAlert} from "reactstrap";
 import s from "./ProfileInfo.module.css"
 
+const BANNER = 'https://i.imgur.com/CaKdFMq.jpg';
+
 const ProfileInfo = (props) => {
-    return <div>
-        <div>
-            <img
-                src='https://images.unsplash.com/photo-1452805809447-a55bbdbc76ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80'/>
+    return (
+        <div className={s.CardD}>
+            <Card>
+                <CardImg src={BANNER}  />
+                <CardBody>
+                    <CardTitle className="h3 mb-2 pt-2 font-weight-bold text-secondary">Alex Coder</CardTitle>
+                    <CardSubtitle className="text-secondary mb-3 font-weight-light text-uppercase" style={{ fontSize: '0.8rem' }}>Web Developer, Lagos</CardSubtitle>
+                    <CardText className="text-secondary mb-4" style={{ fontSize: '0.75rem' }}>Full-stack web developer learning new hacks one day at a time. Web technology enthusiast. Hacking stuffs @theflutterwave.</CardText>
+                    <Button color="success" className="font-weight-bold">View Profile</Button>
+                </CardBody>
+            </Card>
         </div>
-        <div className={s.descriptionBlock}>
-            Avatar and description
-        </div>
-    </div>
+    );
 }
 
 export default ProfileInfo;

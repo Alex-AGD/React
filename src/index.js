@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import store from "./redux/redux-store";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
