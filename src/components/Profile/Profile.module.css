@@ -1,0 +1,16 @@
+.layer1 {
+    margin-top: 15px;
+    padding: 10px; /* Поля вокруг текста */
+    float: left; /* Обтекание по правому краю */
+    width: 700px; /* Ширина слоя */
+}
+.layer2 {
+    margin-top: 15px;
+    padding: 5px; /* Поля вокруг текста */
+    width: 300px; /* Ширина слоя */
+    float: left; /* Обтекание по правому краю */
+}
+.clear {
+    clear: left; /* Отмена обтекания */
+}
+
