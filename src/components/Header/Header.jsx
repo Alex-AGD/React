@@ -1,18 +1,28 @@
 import React from "react";
-import s from './Header.module.css'
 import logo from '../../logo.svg';
 
 import {
-    Container, Row, Col, Form, Input, Button, Navbar, Nav,
-    NavbarBrand, NavLink, NavItem, UncontrolledDropdown,
-    DropdownToggle, DropdownMenu, DropdownItem
+    Col,
+    Container,
+    DropdownItem,
+    DropdownMenu,
+    DropdownToggle,
+    Form,
+    Nav,
+    Navbar,
+    NavbarBrand,
+    NavItem,
+    NavLink,
+    Row,
+    UncontrolledDropdown
 } from 'reactstrap';
 
 const AVATAR = 'https://www.joho.se/wp-content/uploads/2017/11/cropped-samurai-ninja-avatar-warrior-icon-1.png';
 
+
 const Header = () => (
     <header>
-        <Navbar fixed="top" color="light" light expand="xs" className="border-bottom border-gray bg-white" style={{ height: 80 }}>
+        <Navbar fixed="top"  light expand="xs" className="border-bottom border-gray bg-dark" style={{ height: 60 }}>
 
             <Container>
                 <Row noGutters className="position-relative w-100 align-items-center">
@@ -56,8 +66,7 @@ const Header = () => (
 
                     <Col className="d-none d-lg-flex justify-content-end">
                         <Form inline>
-                            <Input type="search" className="mr-3" placeholder="Search React Courses" />
-                            <Button type="submit" color="info" outline>Search</Button>
+                          
                         </Form>
                     </Col>
 

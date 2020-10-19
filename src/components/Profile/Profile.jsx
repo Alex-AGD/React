@@ -5,10 +5,11 @@ import s from "./Profile.module.css"
 
 const Profile = (props) => {
 
-    return <div>
+    return <div className={s.wrapped}>
 
-        <div className={s.layer1}> <ProfileInfo  /> </div>
-        <div className={s.layer2}><MyPostsContainer store={props.store}/> </div>
+        <div className={s.profile}> <ProfileInfo  /> </div>
+        <div className={s.posts}><MyPostsContainer store={props.store}/> </div>
+
 
     </div>
 }

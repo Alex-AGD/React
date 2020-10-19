@@ -1,6 +1,6 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 3fr 10fr;
     margin-top: 10px;
     margin-left: 10px;
 
@@ -10,7 +10,6 @@
     color: #ffa502;
     text-decoration: none;
 }
-
 
 .dialogsItems a.activeLink {
     color: #ff4757;
