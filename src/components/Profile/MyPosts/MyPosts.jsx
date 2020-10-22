@@ -8,17 +8,17 @@ import Button from "@material-ui/core/Button";
 const MyPosts = (props) => {
 
     let postElements =
-        props.posts.map(p => <div><Post message={p.message} likes={p.likes} id={p.id}/></div>)
+        props.posts.map (p => <Post message={p.message} likes={p.likes} id={p.id} key={p.id}/>)
 
-    let newPostElement = React.createRef();
+    let newPostElement = React.createRef ();
 
     let onAddPost = () => {
-        props.addPost();
+        props.addPost ();
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.updateNewPostText(text);
+        props.updateNewPostText (text);
     }
     return (
         <div className={s.postBlock}>

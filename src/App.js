@@ -3,7 +3,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
-import Route from "react-router-dom/es/Route";
+import { Route } from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
@@ -30,16 +30,3 @@ const App = (props) => {
 
 
 export default App;
-
-{/*<Route path='/messages' component={Dialogs}/>
-   <Route path='/profile' component={Profile}/>
-   <Route path='/news' component={News}/>
-   <Route path='/music' component={Music}/>
-   <Route path='/settings' component={Settings}/>*/
-}
-{/*варинат с component*/
-}
-{/*<Route path='/settings' component={SomeComponent}/>**/
-}
-{/*Прокидываем пропсы*/
-}

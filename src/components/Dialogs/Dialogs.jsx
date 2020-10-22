@@ -8,17 +8,17 @@ import Button from "@material-ui/core/Button";
 const Dialogs = (props) => {
     let state = props.dialogsPage;
 
-    let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
-    let messagesElements = state.messages.map(m => <Message message={m.message}/>);
+    let dialogsElements = state.dialogs.map (d => <DialogItem name={d.name} id={d.id} key={d.id}/>);
+    let messagesElements = state.messages.map (m => <Message message={m.message} key={m.id}/>);
     let newMessagesElements = state.newMessageText;
 
 
     let onSendMessageClick = () => {
-        props.sendMessage();
+        props.sendMessage ();
     }
     let onMessageChange = (e) => {
         let body = e.target.value;
-        props.updateNewMessageBody(body);
+        props.updateNewMessageBody (body);
     }
 
     return (
