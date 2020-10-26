@@ -1,10 +1,17 @@
 import React from "react";
+import ReactAudioPlayer from 'react-audio-player';
+import m from './Music.module.css'
 
 const Music = (props) => {
     return (
-        <div className="video-container">
-            <video className="video" autoPlay loop muted src="coverr-60-new-zealand-sunset-moon-beach-hollow-waves-6051.mp4 "/>
-        </div>
+        <div className={m.musicPlayer}>
+        <ReactAudioPlayer
+            src=""
+            autoPlay
+            controls
+            controlsList
+        /></div>
+
     )
 }
 
