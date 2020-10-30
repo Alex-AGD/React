@@ -2,3 +2,15 @@
     width: 70px;
     height: 50px;
 }
+.selectedPage  {
+    color: aliceblue;
+    text-decoration: none;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.selectedPage a.activeLink {
+    color: #ff4757;
+}
+
+
