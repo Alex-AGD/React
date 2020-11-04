@@ -2,12 +2,16 @@ import React from "react";
 import { Button, Card, CardBody, CardImg, CardText } from "reactstrap";
 import Preloader from "../../common/Preloader/Preloader";
 import CardLink from "reactstrap/es/CardLink";
+import Checkbox from "@material-ui/core/Checkbox";
+import Link from "@material-ui/core/Link";
+import { Avatar } from "@material-ui/core";
 
 const BANNER = 'https://i.imgur.com/CaKdFMq.jpg';
 
 const ProfileInfo = (props) => {
     if ( !props.profile) {
-        return <Preloader/>
+        return <Avatar src={BANNER}>
+        </Avatar>
     }
 
     return (
@@ -24,8 +28,18 @@ const ProfileInfo = (props) => {
                     <CardLink className=""> twitter { props.profile.twitter }</CardLink>
                     <CardLink className=""> instagram { props.profile.instagram }</CardLink>
                     <CardLink className=""> youtube { props.profile.youtube }</CardLink>
-                    <CardLink className=""> github { props.profile.github }</CardLink>
-                    <CardLink className=""> lookingForAJob { props.profile.lookingForAJob }</CardLink>
+                    <Link href={ props.profile.github } onClick={ props.profile.github }>
+                        github
+                    </Link>
+                    <div> В поиске работы:
+                        <Checkbox
+                            defaultChecked={props.profile.lookingForAJob}
+                            color="primary"
+                            onChange={ () =>  props.profile.lookingForAJob}
+                            inputProps={ { 'aria-label': 'secondary checkbox' } }
+
+                        />
+                    </div>
                     <CardText className="text-secondary mb-4" style={ { fontSize: '0.75rem' } }>Full-stack web developer
                         learning new hacks one day at a time. Web technology enthusiast.</CardText>
                     <Button color="success" className="font-weight-bold">View Profile</Button>
