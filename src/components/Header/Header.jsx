@@ -20,7 +20,7 @@ import {
 const AVATAR = 'https://www.joho.se/wp-content/uploads/2017/11/cropped-samurai-ninja-avatar-warrior-icon-1.png';
 
 
-const Header = () => (
+const Header = (props) => (
     <header>
         <Navbar fixed="top"  light expand="xs" className="border-bottom border-gray bg-dark" style={{ height: 60 }}>
 
@@ -73,6 +73,10 @@ const Header = () => (
                 </Row>
             </Container>
 
+            <NavItem className="d-flex  font-weight-bold text-primary" >
+                {props.isAuth ? props.login
+                :<NavLink className="font-weight-light" href={'/login'}>Login</NavLink> }
+            </NavItem>
         </Navbar>
     </header>
 );

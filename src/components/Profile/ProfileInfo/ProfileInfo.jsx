@@ -1,10 +1,9 @@
 import React from "react";
 import { Button, Card, CardBody, CardImg, CardText } from "reactstrap";
-import Preloader from "../../common/Preloader/Preloader";
 import CardLink from "reactstrap/es/CardLink";
 import Checkbox from "@material-ui/core/Checkbox";
-import Link from "@material-ui/core/Link";
 import { Avatar } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
 
 const BANNER = 'https://i.imgur.com/CaKdFMq.jpg';
 
@@ -28,16 +27,13 @@ const ProfileInfo = (props) => {
                     <CardLink className=""> twitter { props.profile.twitter }</CardLink>
                     <CardLink className=""> instagram { props.profile.instagram }</CardLink>
                     <CardLink className=""> youtube { props.profile.youtube }</CardLink>
-                    <Link href={ props.profile.github } onClick={ props.profile.github }>
-                        github
-                    </Link>
+
                     <div> В поиске работы:
                         <Checkbox
                             defaultChecked={props.profile.lookingForAJob}
                             color="primary"
                             onChange={ () =>  props.profile.lookingForAJob}
                             inputProps={ { 'aria-label': 'secondary checkbox' } }
-
                         />
                     </div>
                     <CardText className="text-secondary mb-4" style={ { fontSize: '0.75rem' } }>Full-stack web developer
