@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Users.module.css";
 import { NavLink } from "react-router-dom";
 import * as axios from "axios";
-import { toggleFollowingInProgress } from "../../redux/usersReducer";
 
 
 const AVATAR = 'https://www.joho.se/wp-content/uploads/2017/11/cropped-samurai-ninja-avatar-warrior-icon-1.png';
