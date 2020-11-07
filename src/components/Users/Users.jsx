@@ -9,7 +9,7 @@ const AVATAR = 'https://www.joho.se/wp-content/uploads/2017/11/cropped-samurai-n
 let Users = (props) => {
     let pagesCount = Math.ceil (props.totalUsersCount / props.pageSize)
     let pages = [];
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 20; i++) {
         pages.push (i)
 
     }
@@ -48,7 +48,7 @@ let Users = (props) => {
                                         });
 
                                 } }>Unfollow</button> :
-                                
+
                                 <button onClick={ () => {
                                     axios.post (`https://social-network.samuraijs.com/api/1.0/follow/${ u.id }`,
                                         {}, {
