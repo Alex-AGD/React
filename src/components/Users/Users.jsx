@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Users.module.css";
 import { NavLink } from "react-router-dom";
-import * as axios from "axios";
 
 
 const AVATAR = 'https://www.joho.se/wp-content/uploads/2017/11/cropped-samurai-ninja-avatar-warrior-icon-1.png';
@@ -37,33 +36,12 @@ let Users = (props) => {
                     <div>
                             { u.followed ?
                                 <button disabled={props.followingInProgress.some(id => id === u.id )} onClick={ () => {
-                                    props.toggleFollowingInProgress(true,u.id)
-                                    axios.delete (`https://social-network.samuraijs.com/api/1.0/follow/${ u.id }`, {
-                                        withCredentials: true,
-                                        headers: { "API-KEY": "14b1bb35-f426-48db-9776-5c30a6fd08c2" }
-                                    })
-                                        .then (response => {
-                                            if (response.data.resultCode === 0) {
-                                                props.unfollow (u.id)
-                                            }
-                                            props.toggleFollowingInProgress(false, u.id)
-                                        });
+                                    props.unfollow(u.id)
 
                                 } }>Unfollow</button> :
 
                                 <button disabled={props.followingInProgress.some(id => id === u.id )} onClick={ () => {
-                                    props.toggleFollowingInProgress(true,u.id)
-                                    axios.post (`https://social-network.samuraijs.com/api/1.0/follow/${ u.id }`,
-                                        {}, {
-                                            withCredentials: true,
-                                            headers: { "API-KEY": "14b1bb35-f426-48db-9776-5c30a6fd08c2" }
-                                        })
-                                        .then (response => {
-                                            if (response.data.resultCode === 0) {
-                                                props.follow (u.id)
-                                            }
-                                            props.toggleFollowingInProgress(false,u.id)
-                                        });
+                                    props.follow(u.id);
 
                                 } }> Follow </button> }
                     </div>
