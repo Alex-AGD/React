@@ -4,6 +4,7 @@ import CardLink from "reactstrap/es/CardLink";
 import Checkbox from "@material-ui/core/Checkbox";
 import { Avatar } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
+import ProfileStatus from "./ProfileStatus";
 
 const BANNER = 'https://i.imgur.com/CaKdFMq.jpg';
 
@@ -17,6 +18,7 @@ const ProfileInfo = (props) => {
         <div>
             <Card>
                 <CardImg src={ props.profile.photos.large }/>
+                <ProfileStatus status={"Test"}/>
                 <CardBody>
                     <CardText className=""> Name: { props.profile.fullName } </CardText>
                     <CardText className=""> В поиске работы: { props.profile.lookingForAJobDescription }</CardText>

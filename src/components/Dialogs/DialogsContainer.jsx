@@ -24,12 +24,11 @@ let mapDispatchToProps = (dispatch) => {
 }
 
 
-
-//High Order Component (hoc)
-/*let AuthRedirectComponent = withAuthRedirect (Dialogs);
-const DialogsContainer = connect (mapStateToProps, mapDispatchToProps) (AuthRedirectComponent);*/
-
 export default compose (
     connect (mapStateToProps, mapDispatchToProps),
     withAuthRedirect
 ) (Dialogs);
+
+//High Order Component (hoc)
+/*let AuthRedirectComponent = withAuthRedirect (Dialogs);
+const DialogsContainer = connect (mapStateToProps, mapDispatchToProps) (AuthRedirectComponent);*/
