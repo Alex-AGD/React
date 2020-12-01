@@ -18,7 +18,7 @@ const ProfileInfo = (props) => {
         <div>
             <Card>
                 <CardImg src={ props.profile.photos.large }/>
-                <ProfileStatus status={"Test"}/>
+                <ProfileStatus status={props.status}/>
                 <CardBody>
                     <CardText className=""> Name: { props.profile.fullName } </CardText>
                     <CardText className=""> В поиске работы: { props.profile.lookingForAJobDescription }</CardText>
